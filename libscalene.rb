@@ -1,9 +1,9 @@
 class Libscalene < Formula
   desc "Memory profiling library for the Scalene profiler for Python"
-  homepage "https://github.com/emeryberger/scalene"
+  homepage "https://github.com/plasma-umass/scalene"
 
   head do
-    url "https://github.com/emeryberger/scalene.git", :branch => "master"
+    url "https://github.com/plasma-umass/scalene.git", :branch => "master"
   end
 
   def install
