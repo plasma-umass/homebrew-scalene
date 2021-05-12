@@ -7,8 +7,6 @@ class Libscalene < Formula
   end
 
   def install
-    inreplace "heaplayers-make.mk", /git clone https:\/\/github.com\/emeryberger\/Heap-Layers/, "/usr/bin/true"
-    system "git", "clone", "https://github.com/emeryberger/Heap-Layers"
     system "make"
 
     lib.install "libscalene.dylib"
