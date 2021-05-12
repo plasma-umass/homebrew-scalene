@@ -1,4 +1,4 @@
-class Libscalene < Formula
+class Scalene < Formula
   desc "Memory profiling library for the Scalene profiler for Python"
   homepage "https://github.com/plasma-umass/scalene"
 
