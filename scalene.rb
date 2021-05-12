@@ -18,7 +18,7 @@ class Scalene < Formula
   def runner_script; <<-EOS
 #!/usr/bin/env sh
 
-DYLD_INSERT_LIBRARIES=#{lib}/libscalene.dylib PYTHONMALLOC=malloc python3 -m scalene "$@"
+OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES DYLD_INSERT_LIBRARIES=#{lib}/libscalene.dylib PYTHONMALLOC=malloc python3 -m scalene "$@"
   EOS
   end
 
