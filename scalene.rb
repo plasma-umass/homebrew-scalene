@@ -20,8 +20,6 @@ class Scalene < Formula
     bin.install "runner_script" => "scalene"
   end
 
-  print "installing library at #{lib}"
-  
   def runner_script; <<~EOS
 #!/usr/bin/env sh
 
