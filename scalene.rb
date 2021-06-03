@@ -29,6 +29,7 @@ class Scalene < Formula
   end
 
   test do
+    puts "Testing..."
     system "scalene"
   end
 
