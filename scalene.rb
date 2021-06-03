@@ -13,8 +13,7 @@ class Scalene < Formula
   def install
     system "make"
 
-    lib.install "libscalene.dylib"
-    # lib.install "scalene/libscalene.dylib"
+    lib.install "scalene/libscalene.dylib"
 
     (buildpath/"runner_script").write(runner_script)
     bin.install "runner_script" => "scalene"
