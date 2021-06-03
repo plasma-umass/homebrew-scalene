@@ -1,14 +1,22 @@
+# typed: false
+# frozen_string_literal: true
+
+##
+# Scalene formula for Homebrew.
 class Scalene < Formula
-  desc "A high-performance CPU, GPU and memory profiler for Python"
+  ##
+  # Installs Scalene script and libraries.
+  desc "High-performance CPU, GPU and memory profiler for Python"
   homepage "https://github.com/plasma-umass/scalene"
+  version "1.3.5"
   license "Apache-2.0"
-  
-  head do
-    url "https://github.com/plasma-umass/scalene.git", :branch => "master"
+
+  stable do
+    url "https://github.com/plasma-umass/scalene.git", revision: "d9671cb6f378822c95cf73c5f9d4ec0a4fd85b0c"
   end
 
-  test do
-    system "scalene --help"
+  head do
+    url "https://github.com/plasma-umass/scalene.git", branch: "master"
   end
 
   def install
@@ -20,11 +28,14 @@ class Scalene < Formula
     bin.install "runner_script" => "scalene"
   end
 
-  def runner_script; <<~EOS
-#!/usr/bin/env sh
-
-OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES DYLD_INSERT_LIBRARIES=#{lib}/libscalene.dylib PYTHONMALLOC=malloc python3 -m scalene "$@"
-  EOS
+  test do
+    system "false"
   end
 
+  def runner_script
+    <<~EOS
+      #!/usr/bin/env sh
+      OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES DYLD_INSERT_LIBRARIES=#{lib}/libscalene.dylib PYTHONMALLOC=malloc python3 -m scalene "$@"
+    EOS
+  end
 end
