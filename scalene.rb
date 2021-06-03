@@ -29,7 +29,7 @@ class Scalene < Formula
   end
 
   test do
-    system "false"
+    system "scalene"
   end
 
   def runner_script
