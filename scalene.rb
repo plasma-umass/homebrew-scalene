@@ -10,7 +10,8 @@ class Scalene < Formula
   homepage "https://github.com/plasma-umass/scalene"
   version "1.3.12"
   license "Apache-2.0"
-
+  depends_on "python" => :build
+  
   stable do
     url "https://github.com/plasma-umass/scalene.git", revision: "4dbfb9038a2d5b3318745e0b1e661a1e8ff5df93"
   end
