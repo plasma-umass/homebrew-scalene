@@ -13,7 +13,7 @@ class Scalene < Formula
   depends_on "python" => :build
   
   stable do
-    url "https://github.com/plasma-umass/scalene.git", revision: "28504643e8d06851e4c7854d50393f9270e98384"
+    url "https://github.com/plasma-umass/scalene.git", revision: "e05b4519ddde383f0e46d3209ac8799f8e79341e"
   end
 
   head do
