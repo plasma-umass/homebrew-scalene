@@ -25,6 +25,9 @@ class Scalene < Formula
 
     lib.install "scalene/libscalene.dylib"
 
+    # Install the Scalene Python package
+    system "python3", "-m", "pip", "install", "-e", "scalene"
+
     (buildpath/"runner_script").write(runner_script)
     bin.install "runner_script" => "scalene"
   end
