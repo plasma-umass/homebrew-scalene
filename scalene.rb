@@ -8,12 +8,12 @@ class Scalene < Formula
   # Installs Scalene script and libraries.
   desc "High-performance CPU, GPU and memory profiler for Python"
   homepage "https://github.com/plasma-umass/scalene"
-  version "1.3.12"
+  version "1.5.32.1"
   license "Apache-2.0"
   depends_on "python" => :build
   
   stable do
-    url "https://github.com/plasma-umass/scalene.git", revision: "4dbfb9038a2d5b3318745e0b1e661a1e8ff5df93"
+    url "https://github.com/plasma-umass/scalene.git", revision: "37ed29b02092a16ff3e658150525a0c5c54b3c79"
   end
 
   head do
